@@ -245,9 +245,9 @@ print(move_along)
 
 books = []
     {
-        'title': 'title 1',
-        'author': 'author 1',
-        'genre': 'genre 1'
+        'title': 'Moby Dick',
+        'author': 'Herman Melville',
+        'genre': 'Wildlife'
     
     }
 
