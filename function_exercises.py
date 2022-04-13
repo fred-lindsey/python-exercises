@@ -37,23 +37,27 @@ def cap_consonant(word):
 print(cap_consonant(word))
 
 # 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
-price = 20
-good_service = True
-def calculate_tip(price):
-    if good_service == True:
-        return price * 0.25
-    if ok_service == True:
-        return price * 0.15
-    elif bad_service == True:
-        return price * 0.05
 
-print(calculate_tip(price))
+# price = 20
+# good_service = True
+# def calculate_tip(price):
+#     if good_service == True:
+#         return price * 0.25
+#     if ok_service == True:
+#         return price * 0.15
+#     elif bad_service == True:
+#         return price * 0.05
+
+# print(calculate_tip(price))
 
 ## another way
-def calculate_tip(bill, tip_percentage=0.2):
-    if type(tip_percentage) != float:
-        return False
-    if tip_percentage < 0 or tip_percentage > 100:
+def calculate_tip(rate, bill):
+    if rate >= 0 and rate <= 1:
+        return bill * rate
+    else:
+        print("try again")
+        return
+  
 
    
     
@@ -117,6 +121,8 @@ print(remove_vowels(input))                     # print to test
 
 input = '!H@rvey Doll@z!'
 def normalize_name(input):
+    input = input.lower()
+    input = input.strip()
     for letter in input:
         if letter.isspace() == True:
             input = input.replace(" ", "_")
@@ -125,22 +131,22 @@ def normalize_name(input):
            input = input.replace(letter, '')
         else:
             continue
-    input = input.lower()
-    input = input.strip()
     return input
 print(normalize_name(input))
 
 # 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 # cumulative_sum([1, 1, 1]) returns [1, 2, 3]
 # cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
-values = [1, 1, 1]
-def cumulative_sum(values):
-    total = 0
-    for value, num in enumerate(values)
-    sumin values:
-        total += value 
-    return total
-print(cumulative_sum(values))
+
+# values = [1, 1, 1]
+# def cumulative_sum(values):
+#     total = 0
+#     for value, num in enumerate(values)
+#     sumin values:
+#         total += value 
+#     return total
+# print(cumulative_sum(values))
+
 # Additional Exercise
 # Once you've completed the above exercises, follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 in order to thouroughly comment your code to explain your code.
 
